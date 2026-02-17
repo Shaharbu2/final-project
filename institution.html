@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>קמפוסנט – חיפוש לפי מוסד</title>
+
+  <!-- פונט מודרני בעברית -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+
+<body>
+    <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <!-- לוגו -->
+      <div class="brand">
+        <div class="logo-mark">ק</div>
+        <div class="brand-text">
+          <h1 class="site-title">קמפוסנט</h1>
+          <p class="site-tagline">ידע שיתופי רב־מוסדי להשוואת תכנים אקדמיים</p>
+        </div>
+      </div>
+
+      <!-- ניווט -->
+      <nav class="site-nav" aria-label="תפריט ראשי">
+        <a href="index.html" class="nav-link">בית</a>
+        <a href="institution.html" class="nav-link" aria-current="page">לפי מוסד</a>
+        <a href="degree.html" class="nav-link">לפי תואר</a>
+        <a href="course.html" class="nav-link">לפי קורס</a>
+      </nav>
+
+      <!-- התחברות -->
+      <div class="header-actions">
+        <a href="my.html" class="btn btn-ghost" >אזור אישי</a>
+        <a href="my.html" class="btn btn-ghost" title="טרם מומש – יופעל בהמשך">הרשמה</a>
+      </div>
+
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero" aria-label="חיפוש לפי מוסד">
+      <div class="container hero-inner">
+
+        <div class="hero-copy">
+          <h2 class="hero-title">חיפוש לפי מוסד אקדמי</h2>
+          <p class="hero-subtitle">
+            בחרי מוסד וקבלי תצוגה מרוכזת של תארים, קורסים ותכנים חדשים מאותו מוסד.
+            אפשר לסנן לפי סוג תוכן ולמיין תוצאות.
+          </p>
+
+          <!-- שורת פילטרים ראשית -->
+          <section class="panel" aria-label="בחירת מוסד וסינון">
+            <header class="panel-head">
+              <h3>הגדרות חיפוש</h3>
+              <a class="link" href="#" title="טרם מומש – ניקוי יתבצע ב-JS">נקה פילטרים</a>
+            </header>
+
+            <form class="feed-item" action="#" method="get" aria-label="טופס חיפוש לפי מוסד">
+              <div class="feed-meta">
+                <label class="meta" for="inst">מוסד</label>
+                <select id="inst" name="inst" class="pill" aria-label="בחירת מוסד">
+                  <option value="" selected>בחרי מוסד…</option>
+                  <option value="tau">אונ׳ תל אביב</option>
+                  <option value="bgu">אונ׳ בן-גוריון</option>
+                  <option value="technion">הטכניון</option>
+                  <option value="colman">המכללה למנהל</option>
+                  <option value="ac">המכללה האקדמית ת״א–יפו</option>
+                </select>
+
+                <span class="meta" aria-hidden="true">|</span>
+
+                <span class="meta">סוגי תכנים</span>
+                <label class="meta"><input type="checkbox" name="type" value="summary" checked> סיכומים</label>
+                <label class="meta"><input type="checkbox" name="type" value="ex" checked> תרגילים</label>
+                <label class="meta"><input type="checkbox" name="type" value="sol" checked> פתרונות</label>
+
+                <span class="meta" aria-hidden="true">|</span>
+
+                <label class="meta" for="sort">מיון</label>
+                <select id="sort" name="sort" class="pill" aria-label="מיון תוצאות">
+                  <option value="new" selected>הכי חדשים</option>
+                  <option value="top">הכי מדורגים</option>
+                  <option value="popular">הכי פופולרי</option>
+                </select>
+              </div>
+
+              <div class="feed-actions" style="margin-top:10px;">
+                <button type="submit" class="btn">חיפוש</button>
+                <a class="btn btn-ghost" href="degree.html" title="טרם מומש – מעבר לדף לפי תואר">חיפוש לפי תואר</a>
+              </div>
+
+            </form>
+          </section>
+        </div>
+
+        <!-- צד ימין: סיכום קצר -->
+        <aside class="hero-card" aria-label="דגשים">
+          <h3>טיפ שימוש</h3>
+          <ul class="status-list">
+            <li>התחילי ממוסד ואז צמצמי לתואר/קורס</li>
+            <li>השתמשי במיון “הכי חדשים” לפני מבחן</li>
+            <li>הכי מדורגים = לרוב הכי ברורים</li>
+          </ul>
+          <a href="course.html" class="link" title="טרם מומש – דף קורס">קפיצה לדף קורס →</a>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- תוכן עיקרי -->
+    <section class="container grid" aria-label="תוצאות לפי מוסד">
+
+      <!-- צד שמאל: תארים פופולריים -->
+      <section class="panel" aria-label="תארים מובילים במוסד">
+        <header class="panel-head">
+          <h3>תארים מובילים במוסד</h3>
+          <a href="degree.html" class="link" title="טרם מומש – מעבר לדף תואר">לכל התארים</a>
+        </header>
+
+        <div class="saved-courses" aria-label="רשימת תארים">
+          <article class="course-card">
+            <span class="badge">תואר</span>
+            <h4>מערכות מידע</h4>
+            <p>קורסי ליבה • תרגול • מבחנים</p>
+            <a class="link" href="degree.html" title="טרם מומש – דף תואר">לפרטים →</a>
+          </article>
+
+          <article class="course-card">
+            <span class="badge">תואר</span>
+            <h4>מדעי המחשב</h4>
+            <p>אלגוריתמים • מבני נתונים</p>
+            <a class="link" href="degree.html" title="טרם מומש – דף תואר">לפרטים →</a>
+          </article>
+
+          <article class="course-card">
+            <span class="badge">תואר</span>
+            <h4>כלכלה</h4>
+            <p>מאקרו • מיקרו • סטטיסטיקה</p>
+            <a class="link" href="degree.html" title="טרם מומש – דף תואר">לפרטים →</a>
+          </article>
+
+          <article class="course-card course-card--add">
+            <h4>+ הוספת תואר מועדף</h4>
+            <p title="טרם מומש – יתבצע עם JS">שמירה לגישה מהירה</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- צד ימין: תכנים חדשים מהמוסד -->
+      <section class="panel" aria-label="תכנים חדשים מהמוסד">
+        <header class="panel-head">
+          <h3>תכנים חדשים מהמוסד</h3>
+
+          <div class="filters" role="group" aria-label="סינון מהיר">
+            <a href="#" class="pill pill-active" title="טרם מומש – סינון ב-JS">הכול</a>
+            <a href="#" class="pill" title="טרם מומש – סינון ב-JS">סיכומים</a>
+            <a href="#" class="pill" title="טרם מומש – סינון ב-JS">תרגילים</a>
+            <a href="#" class="pill" title="טרם מומש – סינון ב-JS">פתרונות</a>
+          </div>
+        </header>
+
+        <div class="feed">
+
+          <article class="feed-item">
+            <div class="feed-meta">
+              <span class="tag">סיכום</span>
+              <span class="meta">מערכות מידע • שנה ב׳</span>
+            </div>
+            <h4>SQL — טעויות נפוצות ב-GROUP BY</h4>
+            <p>דוגמאות קצרות + קייסים שמבלבלים במבחן.</p>
+            <div class="feed-actions">
+              <a href="course.html" class="link" title="טרם מומש – דף קורס">לצפייה</a>
+              <a href="#" class="link" title="טרם מומש – שמירה ב-JS">שמירה</a>
+            </div>
+          </article>
+
+          <article class="feed-item">
+            <div class="feed-meta">
+              <span class="tag tag-alt">תרגיל</span>
+              <span class="meta">סטטיסטיקה • שיעור 4</span>
+            </div>
+            <h4>התפלגות נורמלית — סט תרגילים מדורג</h4>
+            <p>כולל תרגול עם רמזים לפני פתרון מלא.</p>
+            <div class="feed-actions">
+              <a href="course.html" class="link" title="טרם מומש – דף קורס">לצפייה</a>
+              <a href="#" class="link" title="טרם מומש – שמירה ב-JS">שמירה</a>
+            </div>
+          </article>
+
+          <article class="feed-item">
+            <div class="feed-meta">
+              <span class="tag">פתרון</span>
+              <span class="meta">מבני נתונים • תרגול</span>
+            </div>
+            <h4>Hash Tables — ניתוח מורכבות + דגשים</h4>
+            <p>פתרון מלא עם הסבר על התנגשויות.</p>
+            <div class="feed-actions">
+              <a href="course.html" class="link" title="טרם מומש – דף קורס">לצפייה</a>
+              <a href="my.html" class="link" title="טרם מומש – הוספה דרך דף אישי">העלה משהו דומה</a>
+            </div>
+          </article>
+
+        </div>
+
+        <footer class="panel-foot">
+          <a href="course.html" class="btn btn-wide" title="טרם מומש – דף קורס מרכזי">מעבר לדף קורס</a>
+        </footer>
+      </section>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© campus-net • פלטפורמה לשיתוף והשוואת חומרי לימוד בין מוסדות</p>
+      <nav class="footer-nav" aria-label="קישורים תחתונים">
+        <a href="#" title="טרם מומש">אודות</a>
+        <a href="#" title="טרם מומש">תנאים</a>
+        <a href="#" title="טרם מומש">יצירת קשר</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

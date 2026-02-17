@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>קמפוסנט – דף הבית</title>
+
+  <!-- פונט מודרני בעברית -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+
+<body>
+    <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <!-- לוגו -->
+      <div class="brand">
+        <div class="logo-mark">ק</div>
+        <div class="brand-text">
+          <h1 class="site-title">קמפוסנט</h1>
+          <p class="site-tagline">ידע שיתופי רב־מוסדי להשוואת תכנים אקדמיים</p>
+        </div>
+      </div>
+
+      <!-- ניווט -->
+      <nav class="site-nav" aria-label="תפריט ראשי">
+        <a href="index.html" class="nav-link" aria-current="page">בית</a>
+        <a href="institution.html" class="nav-link">לפי מוסד</a>
+        <a href="degree.html" class="nav-link">לפי תואר</a>
+        <a href="course.html" class="nav-link">לפי קורס</a>
+      </nav>
+
+      <!-- התחברות -->
+      <div class="header-actions">
+        <a href="my.html" class="btn btn-ghost" >אזור אישי</a>
+        <a href="#" class="btn btn-ghost" title="טרם מומש – יופעל בהמשך">הרשמה</a>
+      </div>
+
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero" aria-label="חיפוש מהיר">
+      <div class="container hero-inner">
+
+        <div class="hero-copy">
+          <h2 class="hero-title">קמפוסנט: לומדים חכם בין קמפוסים</h2>
+          <p class="hero-subtitle">
+            חפשו לפי קורס, תואר או מוסד אקדמי וגַלּו סיכומים, תרגילים ופתרונות
+            שסטודנטים כמוכם העלו – מכל הארץ.
+          </p>
+
+          <div class="search-buttons" aria-label="אפשרויות חיפוש">
+            <a href="degree.html" class="search-card">
+              <span class="icon">🎓</span>
+              <span class="title">חיפוש לפי תואר</span>
+            </a>
+
+            <a href="institution.html" class="search-card">
+              <span class="icon">🏫</span>
+              <span class="title">חיפוש לפי מוסד אקדמי</span>
+            </a>
+
+            <a href="course.html" class="search-card">
+              <span class="icon">📘</span>
+              <span class="title">חיפוש לפי קורס</span>
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="מה חדש">
+          <h3>מה חדש בקמפוסנט</h3>
+          <ul class="status-list">
+            <li><strong>12</strong> סיכומים חדשים השבוע</li>
+            <li><strong>7</strong> תרגילים עם פתרון מלא</li>
+            <li><strong>4</strong> מוסדות חדשים להשוואה</li>
+          </ul>
+          <a href="#" class="link" title="טרם מומש – יופעל בהמשך">לכל העדכונים →</a>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- אזור תוכן ראשי -->
+    <section class="container grid">
+
+      <!-- קורסים שמורים -->
+      <section class="panel" aria-label="הקורסים השמורים שלי">
+        <header class="panel-head">
+          <h3>הקורסים השמורים שלי</h3>
+          <a href="#" class="link" title="טרם מומש – יופעל בהמשך">ניהול שמורים</a>
+        </header>
+
+        <div class="saved-courses">
+          <a href="#" class="course-card">
+            <span class="badge">שמורים</span>
+            <h4>מבני נתונים</h4>
+            <p>אוספים • עצים • מיון</p>
+          </a>
+
+          <a href="#" class="course-card">
+            <span class="badge">שמורים</span>
+            <h4>SQL ומסדי נתונים</h4>
+            <p>ERD • Normalization</p>
+          </a>
+
+          <a href="#" class="course-card">
+            <span class="badge">שמורים</span>
+            <h4>HCI - ממשקי אדם מחשב</h4>
+            <p>UX • פרוטוטייפ</p>
+          </a>
+
+          <a href="#" class="course-card course-card--add">
+            <h4>+ הוספת קורס</h4>
+            <p>קיצור דרך לקורס חדש</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- תכנים חדשים -->
+      <section class="panel" aria-label="תכנים חדשים">
+        <header class="panel-head">
+          <h3>תכנים חדשים</h3>
+
+          <div class="filters" role="group" aria-label="סינון תכנים">
+            <a href="#" class="pill pill-active">הכול</a>
+            <a href="#" class="pill">סיכומים</a>
+            <a href="#" class="pill">תרגילים</a>
+            <a href="#" class="pill">פתרונות</a>
+          </div>
+        </header>
+
+        <div class="feed">
+
+          <article class="feed-item">
+            <div class="feed-meta">
+              <span class="tag">סיכום</span>
+              <span class="meta">מבני נתונים • אונ׳ תל אביב</span>
+            </div>
+            <h4>Heap &amp; Priority Queue — טעויות נפוצות</h4>
+            <p>סיכום קצר עם דוגמאות קוד ותרשימים + שאלות תרגול.</p>
+            <div class="feed-actions">
+              <a href="#" class="link" title="טרם מומש – יופעל בהמשך">צפייה</a>
+              <a href="#" class="link" title="טרם מומש – יופעל בהמשך">שמירה</a>
+            </div>
+          </article>
+
+          <article class="feed-item">
+            <div class="feed-meta">
+              <span class="tag tag-alt">תרגיל</span>
+              <span class="meta">SQL • המכללה למנהל</span>
+            </div>
+            <h4>JOINs + GROUP BY — סט תרגילים מדורג</h4>
+            <p>כולל קבצי דוגמה והסברים לפתרון.</p>
+            <div class="feed-actions">
+              <a href="#" class="link" title="טרם מומש – יופעל בהמשך">צפייה</a>
+              <a href="#" class="link" title="טרם מומש – יופעל בהמשך">שמירה</a>
+            </div>
+          </article>
+
+          <article class="feed-item">
+            <div class="feed-meta">
+              <span class="tag">פתרון</span>
+              <span class="meta">אלגוריתמים • הטכניון</span>
+            </div>
+            <h4>Quicksort — בחירת Pivot והוכחת נכונות</h4>
+            <p>פתרון מלא + הערות על המלכודות הקלאסיות במבחן.</p>
+            <div class="feed-actions">
+              <a href="#" class="link" title="טרם מומש – יופעל בהמשך">צפייה</a>
+              <a href="#" class="link" title="טרם מומש – יופעל בהמשך">שמירה</a>
+            </div>
+          </article>
+
+        </div>
+
+        <footer class="panel-foot">
+          <a href="#" class="btn btn-wide" title="טרם מומש – יופעל בהמשך">לכל התכנים החדשים</a>
+        </footer>
+      </section>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© campus-net • פלטפורמה לשיתוף והשוואת חומרי לימוד בין מוסדות</p>
+      <nav class="footer-nav" aria-label="קישורים תחתונים">
+        <a href="#" title="טרם מומש – יופעל בהמשך">אודות</a>
+        <a href="#" title="טרם מומש – יופעל בהמשך">תנאים</a>
+        <a href="#" title="טרם מומש – יופעל בהמשך">יצירת קשר</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

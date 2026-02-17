@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>קמפוסנט – לפי קורס</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <!-- לוגו -->
+      <div class="brand">
+        <div class="logo-mark">ק</div>
+        <div class="brand-text">
+          <h1 class="site-title">קמפוסנט</h1>
+          <p class="site-tagline">ידע שיתופי רב־מוסדי להשוואת תכנים אקדמיים</p>
+        </div>
+      </div>
+
+      <!-- ניווט -->
+      <nav class="site-nav" aria-label="תפריט ראשי">
+        <a href="index.html" class="nav-link">בית</a>
+        <a href="institution.html" class="nav-link">לפי מוסד</a>
+        <a href="degree.html" class="nav-link">לפי תואר</a>
+        <a href="course.html" class="nav-link" aria-current="page">לפי קורס</a>
+      </nav>
+
+      <!-- התחברות -->
+      <div class="header-actions">
+        <a href="my.html" class="btn btn-ghost">אזור אישי</a>
+        <a href="my.html" class="btn btn-ghost" title="טרם מומש – יופעל בהמשך">הרשמה</a>
+      </div>
+
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="container page-head" aria-label="כותרת קורס">
+      <div class="panel">
+        <div class="panel-head">
+          <div>
+            <h2 id="courseName" class="hero-title" style="margin:0;">מבני נתונים — Data Structures</h2>
+            <p class="hero-subtitle" style="margin:0;">בחירת תכנים לפי סוג + השוואה בין מוסדות</p>
+          </div>
+
+          <a href="my.html" class="btn" data-go-upload>העלאת חומר לקורס</a>
+        </div>
+
+        <div class="panel-foot course-controls">
+          <nav class="tabs-bar" aria-label="סינון לפי סוג תוכן">
+            <button type="button" class="pill pill-active">סיכומים</button>
+            <button type="button" class="pill" title="טרם מומש – סינון יתבצע ב-JavaScript">תרגילים</button>
+            <button type="button" class="pill"title="טרם מומש – סינון יתבצע ב-JavaScript">פתרונות</button>
+          </nav>
+
+          <nav class="tabs-bar" aria-label="השוואת מוסדות">
+            <button type="button" class="pill pill-active">המוסד שלי</button>
+            <button type="button" class="pill" title="טרם מומש – סינון יתבצע ב-JavaScript">מוסדות אחרים</button>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <section class="container grid" aria-label="תוכן הקורס">
+      <section class="panel" aria-label="סינון מהיר">
+        <header class="panel-head">
+          <h3>סינון מהיר</h3>
+          <a href="#" class="link" title="טרם מומש – יופעל בהמשך">אפס פילטרים</a>
+        </header>
+
+        <div class="feed-item" style="border-top:none;">
+
+          <label class="meta" for="level">רמת קושי</label><br>
+          <select id="level" class="course-select" aria-label="רמת קושי">
+            <option>הכול</option>
+            <option>קל</option>
+            <option>בינוני</option>
+            <option>קשה</option>
+          </select>
+
+          <div style="height:10px;"></div>
+
+          <label class="meta" for="sort">מיון</label><br>
+          <select id="sort" class="course-select" aria-label="מיון תכנים">
+            <option>הכי חדשים</option>
+            <option>הכי מדורגים</option>
+            <option>הכי נשמרים</option>
+          </select>
+
+          <div style="height:12px;"></div>
+
+          <div class="meta">תגיות נפוצות</div>
+          <div class="filters" style="margin-top:8px;">
+            <a href="#" class="pill" title="טרם מומש – יופעל בהמשך">heap</a>
+            <a href="#" class="pill" title="טרם מומש – יופעל בהמשך">BST</a>
+            <a href="#" class="pill" title="טרם מומש – יופעל בהמשך">sorting</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" aria-label="תכנים בקורס">
+        <header class="panel-head">
+          <h3>תכנים מומלצים</h3>
+          <a href="#" class="link" title="טרם מומש – יופעל בהמשך">לכל התכנים</a>
+        </header>
+
+        <div class="feed">
+          <article class="feed-item">
+            <div class="feed-meta">
+              <span class="tag">סיכום</span>
+              <span class="meta">אונ׳ תל אביב • ⭐ 4.7</span>
+            </div>
+            <h4>Heap — מימוש, סיבוכיות, ושאלות מבחן</h4>
+            <p>דגשים פרקטיים + טעויות קלאסיות + תרגול קצר בסוף.</p>
+            <div class="feed-actions">
+              <a href="#" class="link" title="טרם מומש – יופעל בהמשך">צפייה</a>
+              <a href="#" class="link" title="טרם מומש – יופעל בהמשך">שמירה</a>
+            </div>
+          </article>
+
+          <article class="feed-item">
+            <div class="feed-meta">
+              <span class="tag tag-alt">תרגיל</span>
+              <span class="meta">בן‑גוריון • ⭐ 4.4</span>
+            </div>
+            <h4>עצים בינאריים — סט תרגילים לפי רמות</h4>
+            <p>כולל שאלות “טריק” עם מעבר מצביעים והוכחת נכונות.</p>
+            <div class="feed-actions">
+              <a href="#" class="link" title="טרם מומש – יופעל בהמשך">צפייה</a>
+              <a href="#" class="link" title="טרם מומש – יופעל בהמשך">שמירה</a>
+            </div>
+          </article>
+
+          <article class="feed-item">
+            <div class="feed-meta">
+              <span class="tag">פתרון</span>
+              <span class="meta">הטכניון • ⭐ 4.8</span>
+            </div>
+            <h4>Quicksort — בחירת Pivot והוכחת תקינות</h4>
+            <p>פתרון מלא עם הסברים קצרים לכל שלב.</p>
+            <div class="feed-actions">
+              <a href="#" class="link" title="טרם מומש – יופעל בהמשך">צפייה</a>
+              <a href="#" class="link" title="טרם מומש – יופעל בהמשך">שמירה</a>
+            </div>
+          </article>
+        </div>
+
+        <footer class="panel-foot">
+          <a href="my.html" class="btn btn-wide" data-go-upload>העלאת חומר חדש</a>
+        </footer>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© campus-net • פלטפורמה לשיתוף והשוואת חומרי לימוד בין מוסדות</p>
+      <nav class="footer-nav" aria-label="קישורים תחתונים">
+        <a href="#" title="טרם מומש – יופעל בהמשך">אודות</a>
+        <a href="#" title="טרם מומש – יופעל בהמשך">תנאים</a>
+        <a href="#" title="טרם מומש – יופעל בהמשך">יצירת קשר</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="JS/course.js"></script>
+</body>
+</html>

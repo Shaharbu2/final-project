@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>קמפוסנט – האזור האישי</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/style.css" />
+  <link rel="stylesheet" href="CSS/forms.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo-mark">ק</div>
+        <div class="brand-text">
+          <h1 class="site-title">קמפוסנט</h1>
+          <p class="site-tagline">ידע שיתופי רב־מוסדי להשוואת תכנים אקדמיים</p>
+        </div>
+      </div>
+
+      <nav class="site-nav" aria-label="תפריט ראשי">
+        <a href="index.html" class="nav-link">בית</a>
+        <a href="institution.html" class="nav-link">לפי מוסד</a>
+        <a href="degree.html" class="nav-link">לפי תואר</a>
+        <a href="course.html" class="nav-link">לפי קורס</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="my.html" class="btn btn-ghost" >אזור אישי</a>
+        <a href="#" class="btn btn-ghost" title="טרם מומש">התנתקות</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="container grid grid-1">
+
+      <!-- כרטיס פרופיל -->
+      <section class="panel" aria-label="פרופיל">
+        <header class="panel-head">
+          <h3>האזור האישי</h3>
+          <a href="#" class="link" title="טרם מומש">עריכת פרטים</a>
+        </header>
+
+        <div class="panel-body">
+          <div class="profile-card">
+            <div class="profile-meta">
+               <div class="profile-main">
+               <img
+              src="Images/Profile.png"
+              alt="תמונת פרופיל של דנה שקד"
+              class="profile-avatar"/>
+
+              <div class="profile-text">
+                <p class="profile-name"><strong>דנה שקד</strong></p>
+                <p class="profile-sub">סטודנטית • שיתוף חומרים • השוואה בין מוסדות</p>
+              </div>
+                </div>
+              <div class="profile-stats" aria-label="סטטיסטיקות">
+                <div class="stat"><span class="stat-num" id="statUploads">3</span><span class="stat-label">העלאות</span></div>
+                <div class="stat"><span class="stat-num">11</span><span class="stat-label">שמורים</span></div>
+                <div class="stat"><span class="stat-num">4.7</span><span class="stat-label">דירוג</span></div>
+              </div>
+            </div>
+
+            <div class="profile-actions">
+              <button class="btn btn-ghost" type="button" id="btnToggleForm">+ העלאת חומר חדש</button>
+              <a class="btn" href="course.html">חזרה לקורס</a>
+            </div>
+
+            <p class="hint" id="selectedCourseHint" aria-live="polite">טיפ: אם הגעת מדף קורס – שם הקורס יתמלא בטופס.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- התרומות שלי -->
+      <section class="panel" aria-label="החומרים שהעליתי">
+        <header class="panel-head">
+          <h3>החומרים שהעליתי</h3>
+          <div class="filters" role="group" aria-label="סינון תכנים">
+            <button class="pill pill-active" type="button" data-filter="all">הכול</button>
+            <button class="pill" type="button" data-filter="summary">סיכומים</button>
+            <button class="pill" type="button" data-filter="exercise">תרגילים</button>
+            <button class="pill" type="button" data-filter="solution">פתרונות</button>
+          </div>
+        </header>
+
+        <div class="feed" id="myFeed">
+          <article class="feed-item" data-type="summary">
+            <div class="feed-meta">
+              <span class="tag">סיכום</span>
+              <span class="meta">סטטיסטיקה • אונ׳ בן-גוריון</span>
+            </div>
+            <h4>סיכום הסתברות – חוקי חיבור וכפל</h4>
+            <p>דוגמאות קצרות + טיפים למבחן.</p>
+            <div class="feed-actions">
+              <a href="#" class="link" title="טרם מומש">צפייה</a>
+              <button class="link-btn" type="button" data-action="edit" title="טרם מומש – יתבצע ב-JavaScript">עריכה</button>
+              <button class="link-btn danger" type="button" data-action="delete" title="טרם מומש – יתבצע ב-JavaScript">מחיקה</button>
+            </div>
+          </article>
+
+          <article class="feed-item" data-type="exercise">
+            <div class="feed-meta">
+              <span class="tag tag-alt">תרגיל</span>
+              <span class="meta">מבני נתונים • אונ׳ תל אביב</span>
+            </div>
+            <h4>סט תרגילים – Trees (בסיס)</h4>
+            <p>5 שאלות מדורגות עם תשובות קצרות.</p>
+            <div class="feed-actions">
+              <a href="#" class="link" title="טרם מומש">צפייה</a>
+              <button class="link-btn" type="button" data-action="edit" title="טרם מומש – יתבצע ב-JavaScript">עריכה</button>
+              <button class="link-btn danger" type="button" data-action="delete" title="טרם מומש – יתבצע ב-JavaScript">מחיקה</button>
+            </div>
+          </article>
+
+          <article class="feed-item" data-type="solution">
+            <div class="feed-meta">
+              <span class="tag">פתרון</span>
+              <span class="meta">SQL • המכללה למנהל</span>
+            </div>
+            <h4>פתרון מלא – JOINs + GROUP BY</h4>
+            <p>פתרון מפורט עם טעויות נפוצות.</p>
+            <div class="feed-actions">
+              <a href="#" class="link" title="טרם מומש">צפייה</a>
+              <button class="link-btn" type="button" data-action="edit" title="טרם מומש – יתבצע ב-JavaScript">עריכה</button>
+              <button class="link-btn danger" type="button" data-action="delete" title="טרם מומש – יתבצע ב-JavaScript">מחיקה</button>
+            </div>
+          </article>
+        </div>
+
+      </section>
+
+      <!-- טופס העלאה -->
+      <section class="panel" id="uploadPanel" aria-label="טופס העלאה">
+        <header class="panel-head">
+          <h3>העלאת חומר חדש</h3>
+        </header>
+
+        <!-- טופס ששומר ל-DB בצד השרת (PHP) -->
+        <form class="form" id="uploadForm" action="PHP/upload.php" method="post" enctype="multipart/form-data" novalidate>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="contentTitle">כותרת</label>
+              <input id="contentTitle" name="contentTitle" type="text" placeholder="לדוגמה: סיכום הסתברות" required />
+              <p class="field-error" id="errTitle"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="contentType">סוג חומר</label>
+              <select id="contentType" name="contentType" required>
+                <option value="">בחרי…</option>
+                <option value="summary">סיכום</option>
+                <option value="exercise">תרגיל</option>
+                <option value="solution">פתרון</option>
+              </select>
+              <p class="field-error" id="errType"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="institution">מוסד</label>
+              <select id="institution" name="institution" required>
+                <option value="">בחרי…</option>
+                <option value="TAU">אונ׳ תל אביב</option>
+                <option value="BGU">אונ׳ בן-גוריון</option>
+                <option value="TECH">טכניון</option>
+                <option value="COLMAN">המכללה למנהל</option>
+              </select>
+              <p class="field-error" id="errInstitution"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="degree">תואר</label>
+              <select id="degree" name="degree" required>
+                <option value="">בחרי…</option>
+                <option value="IS">מערכות מידע</option>
+                <option value="IE">תעשייה וניהול</option>
+                <option value="CS">מדעי המחשב</option>
+                <option value="BUS">מנהל עסקים</option>
+              </select>
+              <p class="field-error" id="errDegree"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="course">קורס</label>
+              <input id="course" name="course" type="text" placeholder="לדוגמה: סטטיסטיקה / SQL" required />
+              <p class="field-error" id="errCourse"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="semester">סמסטר</label>
+              <select id="semester" name="semester" required>
+                <option value="">בחרי…</option>
+                <option value="A">א׳</option>
+                <option value="B">ב׳</option>
+                <option value="S">קיץ</option>
+              </select>
+              <p class="field-error" id="errSemester"></p>
+            </div>
+
+            <div class="form-field form-field--full">
+              <label for="description">תיאור קצר</label>
+              <textarea id="description" name="description" rows="4" placeholder="מה כולל החומר?" required></textarea>
+              <p class="field-error" id="errDesc"></p>
+            </div>
+
+            <div class="form-field form-field--full">
+              <label for="fileUpload">קובץ (PDF בלבד)</label>
+              <input id="fileUpload" name="fileUpload" type="file" accept="application/pdf" required />
+              <p class="hint" id="fileHint">מומלץ עד 10MB.</p>
+              <p class="field-error" id="errFile"></p>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn" type="submit">שמירה והעלאה</button>
+            <button class="btn btn-ghost" type="reset" id="btnReset">נקה</button>
+          </div>
+
+          <div class="notice" id="formNotice" role="status" aria-live="polite"></div>
+        </form>
+      </section>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© campus-net • פלטפורמה לשיתוף והשוואת חומרי לימוד בין מוסדות</p>
+      <nav class="footer-nav" aria-label="קישורים תחתונים">
+        <a href="#" title="טרם מומש">אודות</a>
+        <a href="#" title="טרם מומש">תנאים</a>
+        <a href="#" title="טרם מומש">יצירת קשר</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- JQUERY (נדרש בהנחיות) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="JS/jquery-demo.js"></script>
+  <script src="JS/my.js"></script>
+</body>
+</html>
