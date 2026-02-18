@@ -3,9 +3,9 @@
 // עדכני לפי הפרטים שלך (שם DB/משתמש/סיסמה/שרת)
 
 $DB_HOST = 'localhost';
-$DB_NAME = 'campusnet';
-$DB_USER = 'root';
-$DB_PASS = '';
+$DB_NAME = 'ayeletdo_campusnet';
+$DB_USER = 'ayeletdo_campususer';
+$DB_PASS = 'Shaharburg147';
 $DB_CHARSET = 'utf8mb4';
 
 $dsn = "mysql:host={$DB_HOST};dbname={$DB_NAME};charset={$DB_CHARSET}";
@@ -19,6 +19,5 @@ $options = [
 try {
   $pdo = new PDO($dsn, $DB_USER, $DB_PASS, $options);
 } catch (PDOException $e) {
-  http_response_code(500);
-  exit('DB connection failed.');
+  exit('DB connection failed: ' . $e->getMessage());
 }
