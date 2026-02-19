@@ -1,6 +1,7 @@
 <?php
 // upload.php – שמירה של טופס העלאה ל-DB + העלאת קובץ
-// ריצה: דרך שרת PHP (למשל XAMPP/WAMP) ולא דרך file://
+// ריצה: דרך שרת PHP (למשל XAMPP/WAMP) ולא דרך file:
+
 
 require_once __DIR__ . '/db.php';
 
@@ -59,14 +60,24 @@ if($f['size'] > $max){
   redirectBack('הקובץ גדול מדי (מומלץ עד 10MB).');
 }
 
-// בדיקת PDF לפי mime + סיומת
+// בדיקת PDF לפי סיומת + mime (בטוח גם בלי fileinfo)
 $ext = strtolower(pathinfo($f['name'], PATHINFO_EXTENSION));
-$finfo = new finfo(FILEINFO_MIME_TYPE);
-$mime = $finfo->file($f['tmp_name']);
-$mimeOk = ($mime === 'application/pdf') || ($mime === 'application/octet-stream');
-if($ext !== 'pdf' || !$mimeOk){
+
+$mime = '';
+if (class_exists('finfo')) {
+  $finfo = new finfo(FILEINFO_MIME_TYPE);
+  $mime = $finfo->file($f['tmp_name']);
+} elseif (function_exists('mime_content_type')) {
+  $mime = mime_content_type($f['tmp_name']);
+}
+
+// אם אין אפשרות לבדוק MIME — לא מפילים את השרת
+$mimeOk = ($mime === 'application/pdf') || ($mime === 'application/octet-stream') || ($mime === '');
+
+if ($ext !== 'pdf' || !$mimeOk) {
   redirectBack('ניתן להעלות PDF בלבד.');
 }
+
 
 // שמירת קובץ
 $uploadsDir = realpath(__DIR__ . '/../Uploads');
