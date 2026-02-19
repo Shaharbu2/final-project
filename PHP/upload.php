@@ -2,8 +2,6 @@
 // upload.php – שמירה של טופס העלאה ל-DB + העלאת קובץ
 // ריצה: דרך שרת PHP (למשל XAMPP/WAMP) ולא דרך file://
 
-try {
-
 require_once __DIR__ . '/db.php';
 
 function redirectBack($msg, $ok=false){
@@ -113,16 +111,4 @@ try {
   // ניקוי קובץ במקרה של כשל DB
   @unlink($target);
   redirectBack('שגיאה בשמירה ל-DB. בדקי שהטבלה קיימת ושפרטי ההתחברות נכונים.');
-}
-
-} catch (Throwable $e) {
-  // שגיאה כללית (חיבור DB, טבלה חסרה וכו') – מחזירים לדף עם הודעה
-  $msg = 'שגיאת שרת: ' . $e->getMessage();
-  $qs = http_build_query(['status' => 'bad', 'msg' => $msg]);
-  if (!headers_sent()) {
-    header('Location: ../my.html?' . $qs);
-    exit;
-  }
-  echo 'Error: ' . htmlspecialchars($msg);
-  exit;
 }
